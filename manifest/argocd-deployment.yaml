@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argocd-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: argocd-web
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: argocd-web
+    spec:
+      containers:
+        - name: app-with-argocd
+          image: enniley/app-with-argocd:2a098f0b759ff4a00aa62e3334f2f9fe33b9d1a5
