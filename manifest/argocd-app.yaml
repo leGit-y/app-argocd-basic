@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: argocd-app-container
-        image: enniley/app-with-argocd:c988243cf9c0dafbdec6b433f8a4b47829567ac8
+        image: enniley/app-with-argocd:9fe28edcaa9ef819118bcfee0f74a2bab2dfdb06
         ports:
           - protocol: TCP
             containerPort: 8080
