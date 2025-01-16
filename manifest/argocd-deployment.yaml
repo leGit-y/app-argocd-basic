@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         - name: app-with-argocd
-          image: enniley/app-with-argocd:ce9b38d0cef7261787259c50e2c7273be12e1801
+          image: enniley/app-with-argocd:baa53e3c9be3187abb46755cb6c43a41a33791bf
