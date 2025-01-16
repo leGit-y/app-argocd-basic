@@ -1,8 +1,10 @@
 name: App With Github Actions with ArgoCD
 
 on:
-   workflow_dispatch
-#  push
+   # workflow_dispatch
+   push:
+      paths-ignore:
+            - 'manifest/**'
 
 jobs:
   ci:
@@ -59,11 +61,11 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ github.sha }}
 
-      - uses: actions/checkout@v4
-        with:
-           repository: leGit-y/app-with-argocd-manifest
-           ref: main
-           token: ${{ secrets.TOKEN }}
+      # - uses: actions/checkout@v4
+      #   with:
+      #      repository: leGit-y/app-with-argocd-manifest
+      #      ref: main
+      #      token: ${{ secrets.TOKEN }}
 
       - name: Set up Image
         run: |
