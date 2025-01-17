@@ -16,6 +16,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          repository: leGit-y/app-with-argocd
+          ref: main
          # Default: ${{ github.token }}
           token: ${{ secrets.TOKEN }}
       
